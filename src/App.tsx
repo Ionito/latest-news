@@ -1,5 +1,12 @@
+import { Footer, Header, Layout } from "@/components";
+
 function App() {
-  return <></>;
+  return (
+    <Layout>
+      <Header />
+      <Footer />
+    </Layout>
+  );
 }
 
 export default App;
