@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+.logo {
+  display: flex;
+  gap: 1rem;
+}
+.input {
+  width: 250px;
+
+  @media (min-width: 768px) {
+    width: 360px;
+  }
+}

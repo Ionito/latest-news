@@ -1,0 +1,26 @@
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  background-color: #b1b1b1;
+}
+.input {
+  height: 100%;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  &::placeholder {
+    color: #999;
+  }
+}
+.endIcon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  fill: #ff0000;
+}
