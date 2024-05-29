@@ -1,12 +1,16 @@
 import { Footer, Header } from '@/components';
+
 import styles from './MainLayout.module.css';
+import React from 'react';
 
-interface Props extends React.PropsWithChildren {}
+interface Props extends React.PropsWithChildren {
+  header?: React.ReactNode;
+}
 
-export const MainLayout = ({ children }: Props): JSX.Element => {
+export const MainLayout = ({ children, header }: Props): JSX.Element => {
   return (
-    <div className={styles['main-layout']}>
-      <Header />
+    <div className={styles.mainLayout}>
+      <Header>{header}</Header>
       <main>{children}</main>
       <Footer />
     </div>

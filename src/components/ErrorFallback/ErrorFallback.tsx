@@ -1,12 +1,16 @@
 import styles from './ErrorFallback.module.css';
 
-export const ErrorFallback = (): JSX.Element => {
+interface Props {
+  reset?: () => void;
+}
+
+export const ErrorFallback = ({
+  reset = () => window.location.assign(window.location.origin),
+}: Props): JSX.Element => {
   return (
     <div className={styles.errorFallback} role="alert">
       <h2>Something went wrong :(</h2>
-      <button onClick={() => window.location.assign(window.location.origin)}>
-        Refresh
-      </button>
+      <button onClick={reset}>Refresh</button>
     </div>
   );
 };

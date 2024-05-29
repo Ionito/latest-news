@@ -1,7 +1,14 @@
-import { MainLayout } from '@/components';
+import { Card } from '@/components/ui';
+import { useLoaderData } from '@tanstack/react-router';
 
-interface Props {}
+export const Home = (): JSX.Element => {
+  const { articles } = useLoaderData({ from: '/_home/' });
 
-export const Home = ({}: Props): JSX.Element => {
-  return <MainLayout>Home Component</MainLayout>;
+  return (
+    <div className="container">
+      {articles.map((a) => (
+        <Card key={a.title} {...a} />
+      ))}
+    </div>
+  );
 };
