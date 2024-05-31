@@ -13,9 +13,3 @@ pnpm dev
 
 - Vite + React + Typescript
 - TanStack Router
-
-## To-Do list
-
-- [ ] set vitest conf
-- [ ] react-query and consume api endpoint data
-- [ ] mock display product
