@@ -1,5 +1,5 @@
 import { useNavigate, useSearch } from '@tanstack/react-router';
-import { Input } from '../ui';
+import { Input } from '../UI';
 import search from '@/assets/search.svg';
 
 export const SearchInput = (): JSX.Element => {
