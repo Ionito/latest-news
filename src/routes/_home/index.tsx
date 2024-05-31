@@ -4,7 +4,12 @@ import { Home } from '@/pages/Home';
 import { fetchNews } from '@/utils/fetchNews';
 import { createFileRoute } from '@tanstack/react-router';
 
+type NewsSearch = { q: string };
+
 export const Route = createFileRoute('/_home/')({
+  validateSearch: (search: Record<string, unknown>): NewsSearch => ({
+    q: (search.q as string) ?? '',
+  }),
   component: Home,
   loaderDeps: ({ search: { q } }) => ({ q }),
   pendingComponent: Loader,

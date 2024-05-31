@@ -44,6 +44,10 @@ h6 {
   overflow-wrap: break-word;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*
   Create a root stacking context
 */
@@ -54,6 +58,6 @@ h6 {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1280px;
   margin-inline: auto;
 }

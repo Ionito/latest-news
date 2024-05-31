@@ -48,7 +48,7 @@ const ArticleArticleIndexLazyRoute = ArticleArticleIndexLazyImport.update({
   path: '/',
   getParentRoute: () => ArticleArticleRoute,
 } as any).lazy(() =>
-  import('./routes/article/_article/index.lazy').then((d) => d.Route),
+  import('./routes/article/_article.index.lazy').then((d) => d.Route),
 )
 
 // Populate the FileRoutesByPath interface
@@ -140,7 +140,7 @@ export const routeTree = rootRoute.addChildren({
       "parent": "/_home"
     },
     "/article/_article/": {
-      "filePath": "article/_article/index.lazy.tsx",
+      "filePath": "article/_article.index.lazy.tsx",
       "parent": "/article/_article"
     }
   }

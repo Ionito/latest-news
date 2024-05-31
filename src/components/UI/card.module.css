@@ -1,2 +1,42 @@
 .card {
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid #111;
+  height: 100%;
+}
+
+.image {
+  height: 220px;
+  object-fit: cover;
+  aspect-ratio: 400/225;
+}
+
+.imageContainer {
+  background-color: #ccc;
+}
+
+.infoContainer {
+  height: 100%;
+  padding: 1rem;
+  background-color: blanchedalmond;
+}
+
+.title {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+.author {
+  margin-bottom: 1rem;
+  color: #4b5563;
+}
+
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
