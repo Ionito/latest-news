@@ -13,3 +13,8 @@ pnpm dev
 
 - Vite + React + Typescript
 - TanStack Router
+
+## Vercel
+
+Seted Vercel to build on push to main
+[Demo](https://latest-news-m9u2bv091-ioni-scheines-projects.vercel.app/)
