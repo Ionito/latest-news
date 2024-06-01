@@ -18,3 +18,10 @@ pnpm dev
 
 Seted Vercel to build on push to main
 [Demo](https://latest-news-m9u2bv091-ioni-scheines-projects.vercel.app/)
+
+## Building and running in Docker
+
+```bash
+docker build -t vite-app .
+docker run -p 80:80 vite-app
+```
