@@ -1,0 +1,21 @@
+.button {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border: 1px solid #111;
+  background-color: var(--secondary);
+  color: var(--primary);
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(from var(--secondary) calc(r - 10) g calc(b + 10));
+  }
+}
+
+.ghost {
+  background-color: transparent;
+  border-color: transparent;
+
+  &:hover {
+    background-color: transparent;
+  }
+}

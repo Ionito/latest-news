@@ -1,9 +1,10 @@
 import { MainLayout } from '@/components';
+import { Button } from '@/components/ui';
 import { Outlet, createFileRoute, useRouter } from '@tanstack/react-router';
 
 const PrevPageLink = () => {
   const { history } = useRouter();
-  return <button onClick={() => history.go(-1)}>back</button>;
+  return <Button onClick={() => history.go(-1)}>{`< volver`}</Button>;
 };
 
 export const Route = createFileRoute('/article/_article')({
@@ -15,3 +16,4 @@ export const Route = createFileRoute('/article/_article')({
     );
   },
 });
+getSelection;

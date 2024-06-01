@@ -1,7 +1,7 @@
 .mainLayout {
   display: grid;
   min-height: 100vh;
-  background-color: bisque;
+  background-color: var(--secondary);
   grid-template-rows: 100px 1fr 100px;
   grid-template-areas:
     'header'

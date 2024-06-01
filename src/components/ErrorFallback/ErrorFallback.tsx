@@ -1,3 +1,4 @@
+import { Button } from '../ui';
 import styles from './ErrorFallback.module.css';
 
 interface Props {
@@ -9,8 +10,8 @@ export const ErrorFallback = ({
 }: Props): JSX.Element => {
   return (
     <div className={styles.errorFallback} role="alert">
-      <h2>Something went wrong :(</h2>
-      <button onClick={reset}>Refresh</button>
+      <h2>Algo salió mal :(</h2>
+      <Button onClick={reset}>Refresh</Button>
     </div>
   );
 };
