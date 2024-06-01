@@ -1,4 +1,4 @@
-import { Card } from '@/components/UI';
+import { Card } from '@/components/ui';
 import { Link, useLoaderData } from '@tanstack/react-router';
 import clsx from 'clsx';
 import styles from './Home.module.css';

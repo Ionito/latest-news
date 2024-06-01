@@ -11,6 +11,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@fontsource-variable/open-sans": "^5.0.29",
     "@tanstack/react-router": "^1.34.0",
     "clsx": "^2.1.1",
     "csstype": "^3.1.3",
