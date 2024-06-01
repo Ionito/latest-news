@@ -5,17 +5,18 @@ import { Home } from '@/pages/Home';
 import { fetchNews } from '@/utils/fetchNews';
 import { createFileRoute } from '@tanstack/react-router';
 
-type NewsSearch = { q: string };
+type NewsSearch = { q: string; page?: number };
 
 export const Route = createFileRoute('/_home/')({
   validateSearch: (search: Record<string, unknown>): NewsSearch => ({
     q: (search.q as string) ?? '',
+    page: (search.page as number) ?? 1,
   }),
   component: Home,
-  loaderDeps: ({ search: { q } }) => ({ q }),
+  loaderDeps: ({ search: { q, page } }) => ({ q, page }),
   pendingComponent: Loader,
-  loader: ({ deps: { q } }) => {
-    return fetchNews(q);
+  loader: ({ deps: { q, page } }) => {
+    return fetchNews(q, page);
   },
   errorComponent: () => <ErrorFallback />,
 });
