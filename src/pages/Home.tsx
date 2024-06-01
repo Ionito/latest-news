@@ -1,4 +1,4 @@
-import { Card } from '@/components/ui';
+import { NewsCard } from '@/components';
 import { Link, useLoaderData } from '@tanstack/react-router';
 import clsx from 'clsx';
 import styles from './Home.module.css';
@@ -10,7 +10,7 @@ export const Home = (): JSX.Element => {
     <div className={clsx('container', styles.homeContainer)}>
       {articles.map((a) => (
         <Link key={a.title} to={`/article`} search={{ ...a }}>
-          <Card {...a} />
+          <NewsCard {...a} />
         </Link>
       ))}
     </div>
