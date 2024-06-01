@@ -1,10 +1,12 @@
-import { NewsCard } from '@/components';
+import { EmptyBanner, NewsCard } from '@/components';
 import { Link, useLoaderData } from '@tanstack/react-router';
 import clsx from 'clsx';
 import styles from './Home.module.css';
 
 export const Home = (): JSX.Element => {
   const { articles } = useLoaderData({ from: '/_home/' });
+
+  if (articles.length === 0) return <EmptyBanner />;
 
   return (
     <div className={clsx('container', styles.homeContainer)}>
