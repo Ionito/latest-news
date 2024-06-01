@@ -6,3 +6,14 @@ export const formatDate = (date: string): string => {
   });
   return formattedDate === 'Invalid Date' ? '' : formattedDate;
 };
+
+export const getPageSize = (): number => {
+  const windowWidth = window.innerWidth ?? 0;
+
+  switch (true) {
+    case windowWidth >= 800:
+      return 12;
+    default:
+      return 10;
+  }
+};

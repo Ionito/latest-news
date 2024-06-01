@@ -1,14 +1,15 @@
-import { PAGE_SIZE } from '@/utils/fetchNews';
 import { Link, useSearch } from '@tanstack/react-router';
 import styles from './Pagination.module.css';
 import { Button } from '../ui';
+import { getPageSize } from '@/utils/utils';
 
 interface Props {
   total: number;
 }
 
 export const Pagination = ({ total }: Props): JSX.Element => {
-  const totalPages = Math.ceil(total / PAGE_SIZE);
+  const page_size = getPageSize();
+  const totalPages = Math.ceil(total / page_size);
   const { page: currentPage = 1 } = useSearch({ from: '/_home/' });
 
   return (
