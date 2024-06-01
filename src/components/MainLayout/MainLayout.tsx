@@ -1,4 +1,4 @@
-import { Footer, Header } from '@/components';
+import { Footer, Header, SocialIcons } from '@/components';
 
 import styles from './MainLayout.module.css';
 import React from 'react';
@@ -12,7 +12,13 @@ export const MainLayout = ({ children, header }: Props): JSX.Element => {
     <div className={styles.mainLayout}>
       <Header>{header}</Header>
       <main>{children}</main>
-      <Footer />
+      <Footer>
+        <SocialIcons
+          twitter="https://twitter.com"
+          linkedin="https://linkedin.com"
+          instagram="https://instagram.com"
+        />
+      </Footer>
     </div>
   );
 };
