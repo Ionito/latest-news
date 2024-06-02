@@ -265,7 +265,7 @@ export const messiArticles = [
 
 export const topHeadLinesNewsResponse = (variant: 'headlines' | 'messi') => ({
   status: 'ok',
-  totalResults: variant === 'headlines' ? 4 : 12,
+  totalResults: variant === 'headlines' ? 10 : 120,
   articles: variant === 'headlines' ? headlinesArticles : messiArticles,
 });
 

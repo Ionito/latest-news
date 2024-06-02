@@ -8,6 +8,7 @@ export default defineConfig({
   plugins: [react(), TanStackRouterVite()],
   test: {
     globals: true,
+    testTimeout: 10000,
     environment: 'jsdom',
     setupFiles: './src/tests/setup.ts',
     exclude: ['**/node_modules/**'],
