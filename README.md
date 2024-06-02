@@ -13,6 +13,8 @@ pnpm dev
 
 - Vite + React + Typescript
 - TanStack Router
+- MSW
+- React testing library
 
 ## Vercel
 
@@ -25,3 +27,12 @@ Seted Vercel to build on push to main
 docker build -t vite-app .
 docker run -p 80:80 vite-app
 ```
+
+## Msw
+
+Mock service worker is installed just if you want to test and the api is failing (I found api is caped to 100 request per day per user).
+You can enable in the browser setting env ´VITE_ENABLE_API_MOCKING´ to ´true´
+
+## Husky
+
+Pre-commit hook set to run commitlint messages. Also it runs test before pushing.
