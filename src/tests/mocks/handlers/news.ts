@@ -272,7 +272,7 @@ export const topHeadLinesNewsResponse = (variant: 'headlines' | 'messi') => ({
 export const newsHandlers = [
   http.get(`${import.meta.env.VITE_APP_API_URL}/top-headlines`, async () => {
     try {
-      return HttpResponse.json(topHeadLinesNewsResponse);
+      return HttpResponse.json(topHeadLinesNewsResponse('headlines'));
     } catch (e: unknown) {
       let error;
       if (typeof e === 'string') {
@@ -286,7 +286,7 @@ export const newsHandlers = [
   }),
   http.get(`${import.meta.env.VITE_APP_API_URL}/everything`, async () => {
     try {
-      return HttpResponse.json(topHeadLinesNewsResponse);
+      return HttpResponse.json(topHeadLinesNewsResponse('messi'));
     } catch (e: unknown) {
       let error;
       if (typeof e === 'string') {
